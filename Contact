@@ -1,0 +1,59 @@
+import React from 'react'
+import "./Contact.css";
+import { Element } from "react-scroll"
+
+function Contact() {
+  return (
+    <Element className="contact" id="contact">
+        <h1>Contacts</h1>
+        <div className='contact_container'>
+        <p>Ph.No :<span> 7373916321</span></p>
+            <p>Email :<span> satheeshmech0605@gmail.com</span></p>
+            <p>Github :<span> SatheeshKumarR67</span></p>
+        </div>
+        
+        <div className='contact_icons'>
+            
+
+
+        </div>
+
+    </Element>
+  )
+}
+
+export default Contact
+
+
+Contact.csss
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 200px 0 100px;
+}
+.contact_container{
+    border: 1px solid white;
+    width: 600px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-top: 20px;
+
+
+}
+.contact_container>p{
+    font-size: 21px;
+    text-align: left;
+    padding-bottom: 20px;
+
+}
+.contact_container>p>span{
+    color: #f84;
+}
