@@ -1,0 +1,44 @@
+import React from 'react'
+import "./experiancecontainer.css"
+import {Element} from "react-scroll";
+import Experiancebox from "../ExperianceBox/experiancebox.jsx"
+
+function Experiancecontainer() {
+  return (
+    <Element className="experiancecontainer" id="exp">
+        <h1>Experiance</h1>
+        <div className='experiance_content'>
+        <Experiancebox number="10+" title="Client"/>
+        <Experiancebox number="60+" title="Projects" style={{backgroundColor:"#f84"}} />
+        <Experiancebox number="6+" title="Year Teaching"/>
+        <Experiancebox number="6000+" title="Students"/>
+        </div>
+
+    </Element>
+  )
+}
+
+export default Experiancecontainer
+
+
+Experiancecontainer.css
+
+.experiancecontainer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 200px 0;
+    height: 100vh;
+}
+.experiancecontainer>h1{
+    padding-bottom: 40px;
+
+}
+.experiance_content{
+    display: flex;
+    width: 80vw;
+    justify-content: space-evenly;
+}
+
