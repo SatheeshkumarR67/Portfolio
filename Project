@@ -1,0 +1,58 @@
+import React, { useState } from 'react'
+import "./project.css"
+
+const Project = ({img,title,desc,link}) => {
+    const [ show,setShow ] = useState(false)
+  return (
+    <a href='{link}'>
+        <div className='project' onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)}>
+            {
+                show?(
+                    <div className='project_content'>
+                        <h4>{title}</h4>
+                        <p>{desc}</p>
+                    </div>
+                ):(
+                    <img src={img}/>
+                )
+            }
+
+        </div>
+    </a>
+  )
+}
+
+export default Project
+
+
+Project..css
+
+.project>img{
+    width: 350px;
+    height: 180px;
+}
+
+.project{
+    margin: 15px;
+    width: 350px;
+    height: 180px;
+    transition: transform 100ms ease-in;
+}
+.project:hover{
+    background-color: #f84;
+    color: white;
+    transform: scale(1.09);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.project_content{
+    padding: 10px;
+}
+.project_content>h4{
+    padding-bottom: 5px;
+}
+.project_content>p{
+    font-size: 18px;
+}
